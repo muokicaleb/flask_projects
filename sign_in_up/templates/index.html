@@ -1,0 +1,189 @@
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Quick Signin & Signup form Flat Responsive Widget Template :: w3layouts</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Quick Signin & Signup form a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta-Tags -->
+    <!-- Index-Page-CSS -->
+    <link rel="stylesheet" href="style.css" type="text/css" media="all">
+    <!-- onlinefonts -->
+    <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+    <!-- //Custom-Stylesheet-Links -->
+</head>
+
+<body>
+    <header>
+        <h1 class="title-agile text-center">Quick Signin & Signup form</h1>
+    </header>
+    <!-- //header -->
+    <section class="login-wrap">
+        <div class="main_w3agile">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+            <label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up">
+            <label for="tab-2" class="tab">Sign Up</label>
+            <div class="login-form">
+                <!-- signin form -->
+                <div class="signin_wthree">
+                    <form method="post" action="#">
+                        <div class="group">
+                            <label for="user" class="label">{{ log_form.email.label}}</label>
+                             {% if log_form.email.errors %}
+                        {{ log_form.email }}
+                        <div class="invalid-feedback">
+                            {% for error in log_form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ log_form.email(class="form-control form-control-lg") }}
+                    {% endif %}
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">{{ log_form.password.label }}</label>
+                            {% if log_form.password.errors %}
+                        {{ log_form.password }}
+                        <div class="invalid-feedback">
+                            {% for error in log_form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ log_form.password }}
+                    {% endif %}
+                        </div>
+                        <div class="group">
+                            <div class="check"> {{ log_form.remember }}</div>
+
+                            <label for="check">
+                                {{ log_form.remember.label }}</label>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign In">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <h2><a href="#">Forgot Password?</a></h2>
+                        </div>
+                    </form>
+                </div>
+                <!-- //signin form -->
+                <!-- signup form -->
+                <div class="signup_wthree">
+                    <form method="post" action="#">
+                        <div class="group">
+                             {{ reg_form.username.label(class="label") }}
+                             {% if reg_form.username.errors %}
+                        {{ reg_form.username(class="input") }}
+                        <div class="invalid-feedback">
+                            {% for error in reg_form.username.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ reg_form.username(class="input") }}
+                    {% endif %}
+                        </div>
+                        <div class="group">
+                            {{ reg_form.password.label(class="label") }}
+                    {% if reg_form.password.errors %}
+                        {{ reg_form.password(class="input") }}
+                        <div class="invalid-feedback">
+                            {% for error in reg_form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ reg_form.password(class="input") }}
+                    {% endif %}
+                        </div>
+                        <div class="group">
+                            {{ reg_form.confirm_password.label(class="label") }}
+                    {% if reg_form.confirm_password.errors %}
+                        {{ reg_form.confirm_password(class="input") }}
+                        <div class="invalid-feedback">
+                            {% for error in reg_form.confirm_password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ reg_form.confirm_password(class="input") }}
+                    {% endif %}
+                        </div>
+                        <div class="group">
+                            {{ reg_form.email.label(class="label") }}
+                    {% if reg_form.email.errors %}
+                        {{ reg_form.email(class="input") }}
+                        <div class="invalid-feedback">
+                            {% for error in reg_form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ reg_form.email(class="input") }}
+                    {% endif %}
+                        </div>
+                        <div class="group">
+                            {{ reg_form.submit(class="button") }}
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <label for="tab-1">Already Member? </label>
+                        </div>
+                    </form>
+                </div>
+                <!-- //signup form -->
+            </div>
+        </div>
+    </section>
+    <!-- //section -->
+    <footer>
+        <div class="copy-wthree text-center">
+            <p>© 2018 Quick Signin & Signup form. All rights reserved | Design by
+                <a href="http://w3layouts.com">W3layouts</a>
+            </p>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <!-- script for password match -->
+    <!-- 
+    <script>
+        window.onload = function () {
+            document.getElementById("password1").onchange = validatePassword;
+            document.getElementById("password2").onchange = validatePassword;
+        }
+
+        function validatePassword() {
+            var pass2 = document.getElementById("password2").value;
+            var pass1 = document.getElementById("password1").value;
+            if (pass1 != pass2)
+                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+            else
+                document.getElementById("password2").setCustomValidity('');
+            //empty string means no validation error
+        }
+    </script>
+    script for password match -->
+</body>
+<!-- //Body -->
+
+</html>
