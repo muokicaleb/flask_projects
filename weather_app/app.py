@@ -15,15 +15,11 @@ class City(db.Model):
     name = db.Column(db.String(50), nullable=False)
 
 
-global new_city
-
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        global new_city
         new_city = request.form.get('city')
-    if new_city:
+    #if new_city:
         new_city_obj = City(name=new_city)
         db.session.add(new_city_obj)
         db.session.commit()
