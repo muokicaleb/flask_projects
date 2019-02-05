@@ -1,9 +1,4 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -24,7 +19,7 @@
     </script>
     <!-- //Meta-Tags -->
     <!-- Index-Page-CSS -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" media="all">
     <!-- onlinefonts -->
     <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
     <!-- //Custom-Stylesheet-Links -->
@@ -47,6 +42,7 @@
                     <form method="post" action="#">
                         <div class="group">
                             <label for="user" class="label">{{ log_form.email.label}}</label>
+                            
                              {% if log_form.email.errors %}
                         {{ log_form.email }}
                         <div class="invalid-feedback">
@@ -55,9 +51,10 @@
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ log_form.email(class="form-control form-control-lg") }}
+                        {{ log_form.email(class="input") }}
                     {% endif %}
-                        </div>
+                     </div>
+                        
                         <div class="group">
                             <label for="pass" class="label">{{ log_form.password.label }}</label>
                             {% if log_form.password.errors %}
@@ -68,17 +65,18 @@
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ log_form.password }}
+                        {{ log_form.password (class="input") }}
                     {% endif %}
-                        </div>
+                                       </div>
                         <div class="group">
-                            <div class="check"> {{ log_form.remember }}</div>
+                             {{ log_form.remember(class="check", value='n') }}
 
                             <label for="check">
                                 {{ log_form.remember.label }}</label>
                         </div>
                         <div class="group">
-                            <input type="submit" class="button" value="Sign In">
+                           
+                            {{log_form.submit_login(class="button")}}
                         </div>
                         <div class="hr"></div>
                         <div class="foot-lnk">
@@ -88,7 +86,7 @@
                 </div>
                 <!-- //signin form -->
                 <!-- signup form -->
-                <div class="signup_wthree">
+                 <div class="signup_wthree">
                     <form method="post" action="#">
                         <div class="group">
                              {{ reg_form.username.label(class="label") }}
@@ -143,7 +141,7 @@
                     {% endif %}
                         </div>
                         <div class="group">
-                            {{ reg_form.submit(class="button") }}
+                            {{ reg_form.submit_signup(class="button") }}
                         </div>
                         <div class="hr"></div>
                         <div class="foot-lnk">
@@ -158,31 +156,13 @@
     <!-- //section -->
     <footer>
         <div class="copy-wthree text-center">
-            <p>© 2018 Quick Signin & Signup form. All rights reserved | Design by
-                <a href="http://w3layouts.com">W3layouts</a>
-            </p>
+            <p>© Signin & Signup form
         </div>
     </footer>
     <!-- //footer -->
     <!-- script for password match -->
-    <!-- 
-    <script>
-        window.onload = function () {
-            document.getElementById("password1").onchange = validatePassword;
-            document.getElementById("password2").onchange = validatePassword;
-        }
 
-        function validatePassword() {
-            var pass2 = document.getElementById("password2").value;
-            var pass1 = document.getElementById("password1").value;
-            if (pass1 != pass2)
-                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-            else
-                document.getElementById("password2").setCustomValidity('');
-            //empty string means no validation error
-        }
-    </script>
-    script for password match -->
+    <!-- script for password match -->
 </body>
 <!-- //Body -->
 
