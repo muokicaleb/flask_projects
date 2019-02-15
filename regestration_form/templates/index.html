@@ -52,24 +52,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<!-- //main -->
 			
-			<!-- password-script -->
-			<script>
-				window.onload = function () {
-					document.getElementById("password1").onchange = validatePassword;
-					document.getElementById("password2").onchange = validatePassword;
-				}
 
-				function validatePassword() {
-					var pass2 = document.getElementById("password2").value;
-					var pass1 = document.getElementById("password1").value;
-					if (pass1 != pass2)
-						document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-					else
-						document.getElementById("password2").setCustomValidity('');
-					//empty string means no validation error
-				}
-			</script>
-			<!-- //password-script -->
 
 			<!--footer-->
 			<div class="footer-w3l">
