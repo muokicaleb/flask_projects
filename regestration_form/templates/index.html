@@ -42,15 +42,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="w3layouts-main">
 				<h2><span>Register now</span></h2>
 					<form action="#" method="post">
-						<input placeholder="Full Name" name="Name" type="text" required="">
-						<input placeholder="Email" name="Email" type="email" required="">
-						<input placeholder="Phone Number" name="phone" type="text" required="">
-						<input placeholder="Password" name="Password" type="password"  id="password1" required="">
-						<input placeholder="Confirm Password" name="Password" type="password"  id="password2" required="">
-						<input type="submit" value="Get Started" name="login">
+						{{form.hidden_tag()}}
+						{{form.username(placeholder="Full Name")}}
+						{{form.email(placeholder="Email")}}
+
+						{{form.password(placeholder="Password")}}
+						{{form.confirm_password(placeholder="Confirm Password")}}
+						{{form.submit}}
+                         <div class="signlink">
+                         	<a href="{{url_for('login')}}">Login</a>
+                         </div>
+						
+						
+						
 					</form>
+
 			</div>
-			<!-- //main -->
+			
 			
 
 

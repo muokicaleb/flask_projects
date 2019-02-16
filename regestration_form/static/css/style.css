@@ -92,7 +92,11 @@ h1.logo-w3  {
 .w3layouts-main{
 	padding: 40px 30px;
 }
-input[type="text"], input[type="email"], input[type="password"] {
+.signlink{
+	padding-top: 20px;
+	font-family: 'Montserrat', sans-serif;
+}
+input[type="text"], input[type="email"], input[type="password"]{
     width: 100%;
     padding: 15px;
     outline: none;
@@ -111,6 +115,12 @@ input[type="text"], input[type="email"], input[type="password"] {
 	-ms-border-radius:3px;
 	-o-border-radius: 3px;
     box-sizing: border-box;
+}
+.remember{
+	padding-bottom: 20px;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
 }
 input[type="submit"] {
     width: 100%;

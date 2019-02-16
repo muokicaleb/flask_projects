@@ -40,23 +40,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="main-w3l">
 			<h1 class="logo-w3">Space Register Form</h1>
 			<div class="w3layouts-main">
-				<h2><span>Login</span></h2>
-					<form action="#" method="post">
-						
-						{{form.hidden_tag()}}
-						{{form.email(placeholder="Email")}}
-						{{form.password(placeholder="Password")}}
-						<div class="remember">
-						{{form.remember}} {{form.remember.label}}
-						</div>
-						{{form.submit}}
-						<div class="signlink">
-                         <a href="{{url_for('reg')}}">Sign up?</a>
-                         </div>
-
-					</form>
-
+				<h2><span>Login Successful</span></h2>
 					
+				<a class="signlink"  href="{{url_for('logout')}}">Logout</a>	
 
 			</div>
 			<!-- //main -->
