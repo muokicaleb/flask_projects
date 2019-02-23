@@ -43,16 +43,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<h2><span>Login</span></h2>
 					<form action="#" method="post">
 						
-						{{form.hidden_tag()}}
-						{{form.email(placeholder="Email")}}
-						{{form.password(placeholder="Password")}}
-						<div class="remember">
-						{{form.remember}} {{form.remember.label}}
-						</div>
-						{{form.submit}}
-						<div class="signlink">
-                         <a href="{{url_for('reg')}}">Sign up?</a>
-                         </div>
+						<input placeholder="Email" name="Email" type="email" required="">
+						<input placeholder="Password" name="Password" type="password"  id="password1" required="">
+
+						<input type="submit" value="Login" name="login">
+						
 
 					</form>
 
@@ -60,7 +55,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 			</div>
 			<!-- //main -->
-			
+			<a  href="{{url_for('reg')}}">Sign up?</a>
 
 
 			<!--footer-->
