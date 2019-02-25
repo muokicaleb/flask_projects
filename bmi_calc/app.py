@@ -12,7 +12,7 @@ app.config['SECRET_KEY'] = '315742e65f9228cea7c3d52418hja5e3'
 def index():
     bmi = ''
     form = input(request.form)
-    if request.method == 'POST' and form.validate():
+    if request.method == 'POST' and 'weight' in request.form:
         kg = float(request.form.get('weight'))
         cm = float(request.form.get('height'))
         bmi = calc(kg, cm)
