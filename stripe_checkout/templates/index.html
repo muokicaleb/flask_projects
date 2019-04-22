@@ -17,14 +17,14 @@
       addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
     </script>
     <!-- font-awesome icons -->
-    <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ url_for('static', filename='css/fontawesome-all.min.css')}}" rel="stylesheet" type="text/css" media="all">
     <!-- //font-awesome icons -->
     <!-- Meta tags -->
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css')}}" type="text/css" media="screen" />
     <link href="css/popup-box.css" rel="stylesheet" type="text/css" media="all" />
     <!-- //pop-ups-->
     <!--stylesheets-->
-    <link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel='stylesheet' type='text/css' media="all">
     <!--//style sheet end here-->
     <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
   </head>
@@ -36,14 +36,14 @@
       <div class="left-side-img">
         <div class="flexslider1">
           <ul class="slides">
-            <li data-thumb="images/p1.jpg">
-              <div class="thumb-image"> <img src="images/p1.jpg" data-imagezoom="true" alt=" "> </div>
+            <li data-thumb="{{ url_for('static, filename='images/p1.jpg')}}">
+              <div class="thumb-image"> <img src="{{ url_for('static, filename='images/p1.jpg')}}" data-imagezoom="true" alt=" "> </div>
             </li>
             <li data-thumb="images/p3.jpg">
-              <div class="thumb-image"> <img src="images/p3.jpg" data-imagezoom="true" alt=" "> </div>
+              <div class="thumb-image"> <img src="{{ url_for('static, filename='images/p3.jpg')}}" data-imagezoom="true" alt=" "> </div>
             </li>
             <li data-thumb="images/p2.jpg">
-              <div class="thumb-image"> <img src="images/p2.jpg" data-imagezoom="true" alt=" "> </div>
+              <div class="thumb-image"> <img src="{{ url_for('static, filename='images/p2.jpg')}}" data-imagezoom="true" alt=" "> </div>
             </li>
           </ul>
           <div class="clearfix"></div>
@@ -90,7 +90,7 @@
         </div>
         <div id="small-dialog1" class="mfp-hide w3ls_small_dialog">
           <div class="tab-grid">
-            <img class="pp-img" src="images/paypal.png" alt="Image Alternative text" title="Image Title">
+            <img class="pp-img" src="{{ url_for('static, filename='images/paypal.png')}}" alt="Image Alternative text" title="Image Title">
             <p>Important: You will be redirected to PayPal's website to securely complete your payment.</p>
             <a href="#" class="pay-pal-btn">Checkout via Paypal</a>
           </div>
@@ -124,10 +124,10 @@
       </p>
     </div>
     <!--js working-->
-    <script src='js/jquery-2.2.3.min.js'></script>
+    <script src="{{ url_for('static, filename='js/jquery-2.2.3.min.js')}}"></script>
     <!--//js working--> 
     <!--pop-up-box video-->
-    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.js')}}"></script>
     <script>
       $(document).ready(function() {
       $('.popup-with-zoom-anim').magnificPopup({
@@ -146,10 +146,10 @@
     </script>
     <!-- //pop-up-box video -->
     <!-- single -->
-    <script src="js/imagezoom.js"></script>
+    <script src="{{ url_for('static', filename='js/imagezoom.js')}}"></script>
     <!-- single -->
     <!-- FlexSlider -->
-    <script src="js/jquery.flexslider.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery.flexslider.js')}}"></script>
     <script>
       // Can also be used with $(document).ready()
       $(window).load(function () {
