@@ -21,7 +21,7 @@
     <!-- //font-awesome icons -->
     <!-- Meta tags -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css')}}" type="text/css" media="screen" />
-    <link href="css/popup-box.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ url_for('static', filename='css/popup-box.css')}}" rel="stylesheet" type="text/css" media="all" />
     <!-- //pop-ups-->
     <!--stylesheets-->
     <link href="{{ url_for('static', filename='css/style.css')}}" rel='stylesheet' type='text/css' media="all">
@@ -36,14 +36,14 @@
       <div class="left-side-img">
         <div class="flexslider1">
           <ul class="slides">
-            <li data-thumb="{{ url_for('static, filename='images/p1.jpg')}}">
-              <div class="thumb-image"> <img src="{{ url_for('static, filename='images/p1.jpg')}}" data-imagezoom="true" alt=" "> </div>
+            <li data-thumb="{{ url_for('static', filename='images/p1.jpg')}}">
+              <div class="thumb-image"> <img src="{{ url_for('static', filename='images/p1.jpg')}}" data-imagezoom="true" alt=" "> </div>
             </li>
-            <li data-thumb="images/p3.jpg">
-              <div class="thumb-image"> <img src="{{ url_for('static, filename='images/p3.jpg')}}" data-imagezoom="true" alt=" "> </div>
+            <li data-thumb="{{ url_for('static', filename='images/p3.jpg')}}">
+              <div class="thumb-image"> <img src="{{ url_for('static', filename='images/p3.jpg')}}" data-imagezoom="true" alt=" "> </div>
             </li>
-            <li data-thumb="images/p2.jpg">
-              <div class="thumb-image"> <img src="{{ url_for('static, filename='images/p2.jpg')}}" data-imagezoom="true" alt=" "> </div>
+            <li data-thumb="{{ url_for('static', filename='images/p2.jpg')}}">
+              <div class="thumb-image"> <img src="{{ url_for('static', filename='images/p2.jpg')}}" data-imagezoom="true" alt=" "> </div>
             </li>
           </ul>
           <div class="clearfix"></div>
@@ -90,7 +90,7 @@
         </div>
         <div id="small-dialog1" class="mfp-hide w3ls_small_dialog">
           <div class="tab-grid">
-            <img class="pp-img" src="{{ url_for('static, filename='images/paypal.png')}}" alt="Image Alternative text" title="Image Title">
+            <img class="pp-img" src="{{ url_for('static', filename='images/paypal.png')}}" alt="Image Alternative text" title="Image Title">
             <p>Important: You will be redirected to PayPal's website to securely complete your payment.</p>
             <a href="#" class="pay-pal-btn">Checkout via Paypal</a>
           </div>
@@ -124,7 +124,7 @@
       </p>
     </div>
     <!--js working-->
-    <script src="{{ url_for('static, filename='js/jquery-2.2.3.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-2.2.3.min.js')}}"></script>
     <!--//js working--> 
     <!--pop-up-box video-->
     <script src="{{ url_for('static', filename='js/jquery.magnific-popup.js')}}"></script>
