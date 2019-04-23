@@ -85,9 +85,28 @@
             </ul>
           </div>
         </div>
+         <div>
+         
+          <form action="/charge" method="post">
+            <script
+              src="https://checkout.stripe.com/checkout.js"
+              class="stripe-button"
+              data-key="{{ key }}"
+              data-description="A Flask Charge"
+              data-amount="500"
+              data-locale="auto">
+            </script>
+          </form>
+        </div>
+
+
+        <!--
         <div class="check_out">
           <a href="#small-dialog1" class="play-icon popup-with-zoom-anim">Proceed To Checkout</a>			
         </div>
+          
+
+        
         <div id="small-dialog1" class="mfp-hide w3ls_small_dialog">
           <div class="tab-grid">
             <img class="pp-img" src="{{ url_for('static', filename='images/paypal.png')}}" alt="Image Alternative text" title="Image Title">
@@ -116,6 +135,8 @@
             </form>
           </div>
         </div>
+       -->
+
       </div>
     </div>
     <div class="copy">
