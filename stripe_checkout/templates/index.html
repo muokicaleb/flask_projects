@@ -85,14 +85,14 @@
             </ul>
           </div>
         </div>
-         <div>
+         <div class="check_out" >
          
-          <form action="/charge" method="post">
+          <form  action="{{url_for('pay')}}" method="post">
             <script
               src="https://checkout.stripe.com/checkout.js"
               class="stripe-button"
               data-key="{{ key }}"
-              data-description="A Flask Charge"
+              data-description="Checkout"
               data-amount="500"
               data-locale="auto">
             </script>
