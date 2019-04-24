@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+from flask import request
 from creds import STRIPE_SECRET_KEY, STRIPE_PUBLISHABLE_KEY
 import stripe
 
@@ -14,9 +15,14 @@ stripe_keys = {
 stripe.api_key = stripe_keys['secret_key']
 
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/")
 def index():
     return render_template('index.html', key=stripe_keys['publishable_key'])
+
+
+@app.route("/pay", methods=['post'])
+def pay():
+    print(request.form)
 
 
 if __name__ == "__main__":
