@@ -1,6 +1,8 @@
 from flask import Flask
 from flask import render_template
 from flask import request
+from flask import redirect
+from flask import url_for
 from creds import STRIPE_SECRET_KEY, STRIPE_PUBLISHABLE_KEY
 import stripe
 
@@ -22,7 +24,15 @@ def index():
 
 @app.route("/pay", methods=['post'])
 def pay():
-    print(request.form)
+    customer = stripe.Customer.create(email=request.form['stripeEmail'], source=request.form['stripeToken'])
+
+    charge = stripe.Charge.create(
+        customer=customer.id,
+        amount=500,
+        currency='usd',
+        description='Product'
+    )
+    return '<h1>Thankyou</h1>'
 
 
 if __name__ == "__main__":
