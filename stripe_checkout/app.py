@@ -22,6 +22,11 @@ def index():
     return render_template('index.html', key=stripe_keys['publishable_key'])
 
 
+@app.route("/thankyou")
+def thankyou():
+    return render_template('thankyou.html')
+
+
 @app.route("/pay", methods=['post'])
 def pay():
     customer = stripe.Customer.create(email=request.form['stripeEmail'], source=request.form['stripeToken'])
@@ -32,7 +37,7 @@ def pay():
         currency='usd',
         description='Product'
     )
-    return '<h1>Thankyou</h1>'
+    return redirect(url_for('thankyou'))
 
 
 if __name__ == "__main__":
