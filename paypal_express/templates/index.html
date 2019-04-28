@@ -1,0 +1,147 @@
+<!--A Design by W3layouts
+  Author: W3layout
+  Author URL: http://w3layouts.com
+  License: Creative Commons Attribution 3.0 Unported
+  License URL: http://creativecommons.org/licenses/by/3.0/
+  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Proceed Checkout Form a Flat Responsive Widget Template :: w3layouts </title>
+    <!-- Meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Proceed Checkout Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates,
+      Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"/>
+    <script>
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <!-- font-awesome icons -->
+    <link href="{{ url_for('static', filename='css/fontawesome-all.min.css')}}" rel="stylesheet" type="text/css" media="all">
+    <!-- //font-awesome icons -->
+    <!-- Meta tags -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css')}}" type="text/css" media="screen" />
+    <link href="{{ url_for('static', filename='css/popup-box.css')}}" rel="stylesheet" type="text/css" media="all" />
+    <!-- //pop-ups-->
+    <!--stylesheets-->
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel='stylesheet' type='text/css' media="all">
+    <!--//style sheet end here-->
+    <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+  </head>
+  <body>
+    <h1 class="header-w3ls">
+      Proceed Checkout Form
+    </h1>
+    <div class="swm-right-w3ls">
+      <div class="left-side-img">
+        <div class="flexslider1">
+          <ul class="slides">
+            <li data-thumb="{{ url_for('static', filename='images/p1.jpg')}}">
+              <div class="thumb-image"> <img src="{{ url_for('static', filename='images/p1.jpg')}}" data-imagezoom="true" alt=" "> </div>
+            </li>
+            <li data-thumb="{{ url_for('static', filename='images/p3.jpg')}}">
+              <div class="thumb-image"> <img src="{{ url_for('static', filename='images/p3.jpg')}}" data-imagezoom="true" alt=" "> </div>
+            </li>
+            <li data-thumb="{{ url_for('static', filename='images/p2.jpg')}}">
+              <div class="thumb-image"> <img src="{{ url_for('static', filename='images/p2.jpg')}}" data-imagezoom="true" alt=" "> </div>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="right-txt-agile">
+        <h2>Product Details</h2>
+        <div class="para-txt">
+          <ul>
+            <li>
+              <p><span class="fas fa-angle-right"></span>100% Pure leather  </p>
+            </li>
+            <li>
+              <p><span class="fas fa-angle-right"></span>Sling Bag</p>
+            </li>
+            <li>
+              <p><span class="fas fa-angle-right"></span> Adjustable Strap </p>
+            </li>
+            <li>
+              <p><span class="fas fa-angle-right"></span>Fashion Model</p>
+            </li>
+            <li>
+              <p><span class="fas fa-angle-right"></span>15Days Return</p>
+            </li>
+          </ul>
+        </div>
+        <div class="offer-discount">
+          <h3>
+            Offers & Discount
+          </h3>
+          <div class="para-txt">
+            <ul>
+              <li>
+                <p><span class="fas fa-angle-right"></span>10% cashback with PayPal</p>
+              </li>
+              <li>
+                <p><span class="fas fa-angle-right"></span>Get 25% Discount</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+         <div class="check_out" >
+         
+          <form  action="{{url_for('pay')}}" method="post">
+            <script
+              src="https://checkout.stripe.com/checkout.js"
+              class="stripe-button"
+              data-key="{{ key }}"
+              data-description="Checkout"
+              data-amount="500"
+              data-locale="auto">
+            </script>
+          </form>
+        </div>
+
+      </div>
+    </div>
+    <div class="copy">
+      <p>&copy;2018 Proceed Checkout Form. All Rights Reserved | Design by 
+        <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a>
+      </p>
+    </div>
+    <!--js working-->
+    <script src="{{ url_for('static', filename='js/jquery-2.2.3.min.js')}}"></script>
+    <!--//js working--> 
+    <!--pop-up-box video-->
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.js')}}"></script>
+    <script>
+      $(document).ready(function() {
+      $('.popup-with-zoom-anim').magnificPopup({
+      type: 'inline',
+      fixedContentPos: false,
+      fixedBgPos: true,
+      overflowY: 'auto',
+      closeBtnInside: true,
+      preloader: false,
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in'
+      });
+      
+      });
+    </script>
+    <!-- //pop-up-box video -->
+    <!-- single -->
+    <script src="{{ url_for('static', filename='js/imagezoom.js')}}"></script>
+    <!-- single -->
+    <!-- FlexSlider -->
+    <script src="{{ url_for('static', filename='js/jquery.flexslider.js')}}"></script>
+    <script>
+      // Can also be used with $(document).ready()
+      $(window).load(function () {
+      	$('.flexslider1').flexslider({
+      		animation: "slide",
+      		controlNav: "thumbnails"
+      	});
+      });
+    </script>
+    <!-- //FlexSlider-->
+  </body>
+</html>
