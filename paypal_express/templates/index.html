@@ -87,16 +87,33 @@
         </div>
          <div class="check_out" >
          
-          <form  action="{{url_for('pay')}}" method="post">
-            <script
-              src="https://checkout.stripe.com/checkout.js"
-              class="stripe-button"
-              data-key="{{ key }}"
-              data-description="Checkout"
-              data-amount="500"
-              data-locale="auto">
-            </script>
-          </form>
+          <!--PayPal client-side script -->
+				<script src="https://www.paypalobjects.com/payouts/js/payouts_aac.js"></script>
+
+				<!-- Set up a container for ACC to be rendered into -->
+				<div id="container"></div>
+
+				<script>
+				    // Render the AAC component
+				    paypal.PayoutsAAC.render({
+				        // Use sandbox for testing
+				        env: "<sandbox/production>",
+				        clientId: {
+				          production: "<production clientId>",
+				          sandbox: "<sandbox clientId>"
+				        },
+				        merchantId: "<Merchant Account ID>",
+				        pageType: "<signup/login>",
+				        onLogin: function(response) {
+				          if (response.err) {
+				            console.log(response.err)
+				          } else {
+				            console.log(response.body.code);
+				          }
+				        }
+				      }, '#container');
+				</script>
+
         </div>
 
       </div>
