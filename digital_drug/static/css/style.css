@@ -1,0 +1,22 @@
+body{
+  background-image: url('../img/cosmos.jpg');
+}
+
+
+.pageCenter{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  	
+	
+}
+
+.construction{
+	background-image: url('../img/underconstruction.png');
+}
+
+.vid{
+	width:100%;
+	height:100%;
+}
