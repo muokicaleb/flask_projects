@@ -8,26 +8,34 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel='stylesheet' type='text/css' media="all">
+
     <title>Digital Drug</title>
   </head>
   <body>
     <!--Nav bar-->
-          <div>
+          <div class="">
            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">Digital Drug</a>
+                <a class="navbar-brand" href="{{ url_for('index') }}">Digital Drug</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
                   <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">Upload</a>
-                    <a class="nav-item nav-link" href="#">New</a>
-                    <a class="nav-item nav-link" href="#">Playlist</a>
-                    <a class="nav-item nav-link" href="#">Profile</a>
+                    <a class="nav-item nav-link active" href="{{ url_for('index') }}">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="{{ url_for('construction') }}">Upload</a>
+                    <a class="nav-item nav-link" href="{{ url_for('construction') }}">New</a>
+                    <a class="nav-item nav-link" href="{{ url_for('construction') }}">Playlist</a>
+                    <a class="nav-item nav-link" href="{{ url_for('construction') }}">Profile</a>
                   </div>
                 </div>
               </nav>
+            </div>
+
+            <div class="pageCenter">
+              <div class="container-fluid">
+              <iframe class="vid" src="https://www.youtube-nocookie.com/embed/b-DsyvjhJno" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
             </div>
 
     <!-- Optional JavaScript -->
